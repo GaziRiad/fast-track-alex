@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #1f2937;
+    border-right-color: #bcc6d3;
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid #bcc6d3;
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+.bg-overlay {
+  position: relative;
+  overflow: hidden; /* Ensure the overlay doesn’t overflow */
+}
+
+.bg-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* 80% black overlay */
+  z-index: 1; /* Ensure it sits above the background but below the text */
+}
+
+/* Blog pattern fade */
+.blog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(248, 248, 248, 1) 0%,
+    rgba(248, 248, 248, 0.9) 10%,
+    rgba(248, 248, 248, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none; /* Ensure the overlay doesn't block interactions */
+}
