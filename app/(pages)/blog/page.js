@@ -13,8 +13,8 @@ function page({ searchParams }) {
 
   return (
     <div className="">
-      {/* <BlogHero />
-      <BlogPosts filter={filter} /> */}
+      <BlogHero />
+      <BlogPosts filter={filter} />
     </div>
   );
 }

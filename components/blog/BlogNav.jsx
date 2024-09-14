@@ -52,7 +52,7 @@ function BlogNav({ data }) {
             })
           }
           defaultValue={Categories.filter(
-            (category) => category.value === selectedCategory,
+            (category) => category.value === selectedCategory
           )}
           components={animatedComponents}
           styles={{
