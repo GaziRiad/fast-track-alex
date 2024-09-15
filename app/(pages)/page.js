@@ -8,6 +8,10 @@ import Process from "@/components/Home/Process";
 import Rmo from "@/components/Home/Rmo";
 import Testimonials from "@/components/Home/Testimonials";
 import WhyChoose from "@/components/Home/WhyChoose";
+import Spinner from "@/components/ui/Spinner";
+import { Suspense } from "react";
+
+export const revalidate = 3600;
 
 function page({ searchParams }) {
   const category = "view-all";
@@ -28,7 +32,9 @@ function page({ searchParams }) {
       <Process />
       <Testimonials />
       <Licensing />
-      <BlogSection filter={filter} />
+      <Suspense fallback={<Spinner />} key={filter}>
+        <BlogSection filter={filter} />
+      </Suspense>
       <FAQ />
       <Contact />
     </div>

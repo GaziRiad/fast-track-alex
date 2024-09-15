@@ -42,7 +42,7 @@ export async function fetchBlogs(filter, pageSize = 7) {
       }
     `;
 
-    const data = await client.fetch(query, { next: { revalidate: 0 } });
+    const data = await client.fetch(query);
 
     return data; // data.posts will contain the posts, and data.count will contain the count
   } catch (err) {
@@ -54,16 +54,72 @@ export async function fetchBlogs(filter, pageSize = 7) {
 export async function fetchCategories() {
   try {
     const data = await client.fetch(
-      `*[_type == "category"] {
+      `*[_type == "category"]   {
         title,
         slug,
     }
-              `,
-      { next: { revalidate: 0 } }
+              `
     );
 
     return data;
   } catch (err) {
     return console.log(err.message);
+  }
+}
+
+export async function fetchPost(slug) {
+  try {
+    const query = `
+      *[_type == "post" && slug.current == "${slug}"] {
+        title,
+        slug,
+        readTime,
+        publishedAt,
+        author -> {
+          name,
+          image {
+            asset -> {
+              _id,
+              url
+            }
+          }
+        },
+        summary,
+        categories[]->{
+          title,
+          slug
+        },
+        mainImage {
+          asset -> {
+            _id,
+            url
+          },
+          alt
+        },
+        body
+      }
+    `;
+
+    const data = await client.fetch(query, { next: { revalidate: 1 } });
+
+    return data.length > 0 ? data[0] : null; // Return the post or null if not found
+  } catch (err) {
+    console.log(err.message);
+    return null;
+  }
+}
+
+export async function getAllSlugs() {
+  try {
+    const data = await client.fetch(
+      `*[_type == "post"] {
+        "slug": slug.current
+      }`
+    );
+
+    return data;
+  } catch (err) {
+    console.log(err.message);
+    return [];
   }
 }

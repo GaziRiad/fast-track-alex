@@ -4,8 +4,6 @@ import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 
 function PostItem({ data }) {
-  console.log(data);
-
   return (
     <article className="border-[rgb(17,17,17, 0.1)] flex h-full flex-col overflow-hidden rounded-md border bg-white">
       <div className="relative aspect-square h-[300px] w-full">

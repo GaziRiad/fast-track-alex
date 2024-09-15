@@ -1,5 +1,9 @@
 import BlogHero from "@/components/blog/BlogHero";
 import BlogPosts from "@/components/blog/BlogPosts";
+import Spinner from "@/components/ui/Spinner";
+import { Suspense } from "react";
+
+export const revalidate = 3600;
 
 function page({ searchParams }) {
   const category = searchParams.category ?? "view-all";
@@ -12,9 +16,11 @@ function page({ searchParams }) {
   };
 
   return (
-    <div className="">
+    <div>
       <BlogHero />
-      <BlogPosts filter={filter} />
+      <Suspense fallback={<Spinner />} key={filter}>
+        <BlogPosts filter={filter} />
+      </Suspense>
     </div>
   );
 }

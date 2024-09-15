@@ -15,7 +15,6 @@ async function BlogPosts({ filter }) {
 
   const firstPost = Posts[0];
 
-  console.log(Posts);
   if (Posts.length < 1) return null;
 
   return (
