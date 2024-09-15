@@ -103,7 +103,7 @@ const myPortableTextComponents = {
 
 function PostBody({ data }) {
   return (
-    <section className="mx-auto grid max-w-[1400px] grid-cols-1 gap-36 bg-white px-5 py-24 lg:grid-cols-[30fr_70fr]">
+    <section className="mx-auto grid max-w-[1400px] grid-cols-1 gap-36 bg-white px-5 py-10 lg:grid-cols-[30fr_70fr] lg:py-24">
       <TableContent headings={data.headings} />
 
       <div className="group text-[#1C1B17]/80">
