@@ -1,11 +1,9 @@
-import { fetchCategories } from "@/services/api";
-import BlogNav from "./BlogNav";
-
 import { BsStars } from "react-icons/bs";
+import { Suspense } from "react";
+import Spinner from "../ui/Spinner";
+import BlogNavigation from "./BlogNavigation";
 
 async function BlogHero() {
-  const categories = await fetchCategories();
-
   return (
     <section className="bg-blog-bg relative bg-center px-5 pb-16 pt-12 text-center font-display lg:pt-20">
       <div className="blog-overlay"></div>
@@ -26,7 +24,9 @@ async function BlogHero() {
         </p>
       </div>
 
-      <BlogNav data={categories} />
+      <Suspense fallback={<div></div>}>
+        <BlogNavigation />
+      </Suspense>
     </section>
   );
 }

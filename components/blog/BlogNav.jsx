@@ -25,7 +25,7 @@ function BlogNav({ data }) {
   ];
 
   return (
-    <nav>
+    <>
       <div className="border-[rgb(17,17,17, 0.08)] relative z-10 mx-auto hidden w-fit rounded-md border bg-white p-2 py-3 lg:block">
         <ul className="flex justify-center gap-2">
           {Categories.map((category, index) => (
@@ -81,7 +81,7 @@ function BlogNav({ data }) {
           })}
         />
       </div>
-    </nav>
+    </>
   );
 }
 

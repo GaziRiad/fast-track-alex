@@ -8,7 +8,6 @@ import Process from "@/components/Home/Process";
 import Rmo from "@/components/Home/Rmo";
 import Testimonials from "@/components/Home/Testimonials";
 import WhyChoose from "@/components/Home/WhyChoose";
-import Spinner from "@/components/ui/Spinner";
 import { Suspense } from "react";
 
 export const revalidate = 3600;
@@ -32,7 +31,7 @@ function page({ searchParams }) {
       <Process />
       <Testimonials />
       <Licensing />
-      <Suspense fallback={<Spinner />} key={filter}>
+      <Suspense fallback={<div>Loading...</div>}>
         <BlogSection filter={filter} />
       </Suspense>
       <FAQ />
