@@ -1,5 +1,5 @@
 function Layout({ children }) {
-  return <div className="bg-white"> {children}</div>;
+  return <div className="h-full"> {children}</div>;
 }
 
 export default Layout;

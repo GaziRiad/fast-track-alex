@@ -62,3 +62,8 @@
   z-index: 1;
   pointer-events: none; /* Ensure the overlay doesn't block interactions */
 }
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}

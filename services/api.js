@@ -58,7 +58,7 @@ export async function fetchCategories() {
         title,
         slug,
     }
-              `
+              `,
     );
 
     return data;
@@ -96,7 +96,8 @@ export async function fetchPost(slug) {
           },
           alt
         },
-        body
+        body,
+        "headings": body[length(style) == 2 && string::startsWith(style, "h")]
       }
     `;
 
@@ -109,12 +110,28 @@ export async function fetchPost(slug) {
   }
 }
 
+// export async function getHeadingsPost(slug) {
+//   try {
+//     const data = await client.fetch(
+//       `*[ _type == "post" && slug.current == "${slug}"] {
+//          body,
+
+// }`,
+//     );
+
+//     return data;
+//   } catch (err) {
+//     console.log(err.message);
+//     return [];
+//   }
+// }
+
 export async function getAllSlugs() {
   try {
     const data = await client.fetch(
       `*[_type == "post"] {
         "slug": slug.current
-      }`
+      }`,
     );
 
     return data;
