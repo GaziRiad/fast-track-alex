@@ -46,7 +46,7 @@ const myPortableTextComponents = {
     h1: ({ children, node }) => (
       <h1
         id={node?._key}
-        className="mb-6 font-display text-3xl font-medium text-[#1C1B17]"
+        className="mb-6 font-display text-2xl font-medium text-[#1C1B17] lg:text-3xl"
       >
         {children}
       </h1>
@@ -54,7 +54,7 @@ const myPortableTextComponents = {
     h2: ({ children, node }) => (
       <h2
         id={node?._key}
-        className="mb-6 font-display text-3xl font-medium text-[#1C1B17]"
+        className="mb-6 font-display text-2xl font-medium text-[#1C1B17] lg:text-3xl"
       >
         {children}
       </h2>
@@ -62,7 +62,7 @@ const myPortableTextComponents = {
     h3: ({ children, node }) => (
       <h3
         id={node?._key}
-        className="mb-1 font-display text-2xl font-medium text-[#1C1B17]"
+        className="mb-1 font-display text-xl font-medium text-[#1C1B17] lg:text-2xl"
       >
         {children}
       </h3>
@@ -70,7 +70,7 @@ const myPortableTextComponents = {
     h4: ({ children, node }) => (
       <h4
         id={node?._key}
-        className="mb-1 font-display text-xl font-medium text-[#1C1B17]"
+        className="mb-1 font-display text-lg font-medium text-[#1C1B17] lg:text-xl"
       >
         {children}
       </h4>
