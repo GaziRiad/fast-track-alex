@@ -7,8 +7,8 @@ import { LuArrowRight } from "react-icons/lu";
 
 function PostHero({ data }) {
   return (
-    <section className="bg-[#EFEFEF] text-[#1C1B17]">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-14 py-16">
+    <section className="bg-[#EFEFEF] px-5 text-[#1C1B17]">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 py-12 lg:grid-cols-2 lg:gap-14 lg:py-16">
         <div>
           <div className="mb-12 flex items-center gap-3 text-sm text-[#1C1B17]/80 transition-all hover:text-[#1C1B17]">
             <Link href="#">Resources</Link>
@@ -19,7 +19,7 @@ function PostHero({ data }) {
               {data.category.title}
             </Link>
           </div>
-          <p className="mb-4 text-sm text-[#1C1B17]/60">
+          <p className="mb-2 text-sm text-[#1C1B17]/60 lg:mb-4">
             {format(new Date(data.date), "MMMM d, yyyy")}
           </p>
           <h1 className="mb-6 font-display text-4xl font-bold">{data.title}</h1>

@@ -12,7 +12,7 @@ function TableContent({ headings }) {
   const [activeLink, setActiveLink] = useState("");
 
   return (
-    <aside className="sticky top-4 max-h-[calc(100vh-6rem)] overflow-y-auto">
+    <aside className="sticky top-4 hidden max-h-[calc(100vh-6rem)] overflow-y-auto lg:block">
       <h3 className="mb-4 text-base font-bold">In this article</h3>
       <div className="flex flex-col gap-4 border-t border-[#DADADA] pt-4 text-[#1C1B17]/60">
         {headings.map((heading, index) => (
