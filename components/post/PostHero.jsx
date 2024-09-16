@@ -22,7 +22,9 @@ function PostHero({ data }) {
           <p className="mb-2 text-sm text-[#1C1B17]/60 lg:mb-4">
             {format(new Date(data.date), "MMMM d, yyyy")}
           </p>
-          <h1 className="mb-6 font-display text-4xl font-bold">{data.title}</h1>
+          <h1 className="mb-6 font-display text-3xl font-bold lg:text-4xl">
+            {data.title}
+          </h1>
 
           <div className="flex items-center gap-2">
             <Image
