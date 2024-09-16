@@ -22,8 +22,8 @@ const NavItems = [
     href: "#",
   },
   {
-    link: "FAQ",
-    href: "#",
+    link: "Contact",
+    href: "/contact",
   },
   {
     link: "Blog",

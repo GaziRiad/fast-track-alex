@@ -3,7 +3,10 @@ import AccordionItem from "../ui/AccordionItem";
 
 function FAQ() {
   return (
-    <section className="mx-auto grid max-w-[1400px] px-5 py-10 lg:py-20">
+    <section
+      id="faq"
+      className="mx-auto grid max-w-[1400px] px-5 py-10 lg:py-20"
+    >
       <h2 className="mb-10 text-center font-display text-2xl font-bold text-[#333] lg:text-4xl">
         Frequently Asked Questions
       </h2>
