@@ -71,7 +71,7 @@ async function BlogSection({ filter }) {
           </div>
         ))}
       </div>
-      <Pagination count={totalPages} type="blogPage" />
+      <Pagination count={totalPages} />
     </section>
   );
 }
