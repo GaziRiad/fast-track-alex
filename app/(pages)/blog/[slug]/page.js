@@ -2,7 +2,7 @@ import PostBody from "@/components/post/PostBody";
 import PostHero from "@/components/post/PostHero";
 import { fetchPost, getAllSlugs } from "@/services/api";
 
-export const revalidate = 0;
+export const revalidate = 30;
 
 // This strategy is used to generate static paths for dynamic routes (ISR)
 export async function generateStaticParams() {
