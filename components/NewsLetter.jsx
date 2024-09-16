@@ -1,7 +1,7 @@
 function NewsLetter() {
   return (
     <section className="border-[rgb(17,17,17, 0.05)] mx-auto grid max-w-[1400px] grid-cols-1 rounded-md border bg-white text-primary-700 lg:grid-cols-[60fr_40fr]">
-      <div className="bg-newsletter-bg relative bg-cover px-3 py-5 lg:px-20 lg:py-[90px]">
+      <div className="relative bg-newsletter-bg bg-cover px-3 py-5 lg:px-20 lg:py-[90px]">
         <p className="mb-2 text-2xl font-bold lg:mb-6 lg:text-[40px]">
           Stay up to date !
         </p>

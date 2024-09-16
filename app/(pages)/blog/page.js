@@ -16,7 +16,7 @@ function page({ searchParams }) {
   };
 
   return (
-    <div>
+    <div className="pb-10 lg:pb-20">
       <BlogHero />
       <Suspense fallback={<Spinner />} key={filter}>
         <BlogPosts filter={filter} />
