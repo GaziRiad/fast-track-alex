@@ -1,23 +1,5 @@
+import { FaqItems } from "@/lib/constants";
 import AccordionItem from "../ui/AccordionItem";
-
-const FaqItems = [
-  {
-    title: "What is an RMO?",
-    text: "An RMO (Responsible Managing Officer) is a licensed contractor who lends their experience and qualifications to your company. In California, under Business and Professions Code Section 7068, an RMO allows you to obtain a contractor's license without meeting the traditional 4-year experience requirement or passing difficult exams.",
-  },
-  {
-    title: "How long does the licensing process take?",
-    text: "An RMO (Responsible Managing Officer) is a licensed contractor who lends their experience and qualifications to your company. In California, under Business and Professions Code Section 7068, an RMO allows you to obtain a contractor's license without meeting the traditional 4-year experience requirement or passing difficult exams.",
-  },
-  {
-    title: "What support do you offer after I get my license?",
-    text: "An RMO (Responsible Managing Officer) is a licensed contractor who lends their experience and qualifications to your company. In California, under Business and Professions Code Section 7068, an RMO allows you to obtain a contractor's license without meeting the traditional 4-year experience requirement or passing difficult exams.",
-  },
-  {
-    title: "Is FastTrack Licensing available in all states?",
-    text: "An RMO (Responsible Managing Officer) is a licensed contractor who lends their experience and qualifications to your company. In California, under Business and Professions Code Section 7068, an RMO allows you to obtain a contractor's license without meeting the traditional 4-year experience requirement or passing difficult exams.",
-  },
-];
 
 function FAQ() {
   return (

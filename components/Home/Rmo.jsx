@@ -1,6 +1,3 @@
-import { MdOutlineShield } from "react-icons/md";
-import { FiClock } from "react-icons/fi";
-import { TbLogout } from "react-icons/tb";
 import Image from "next/image";
 
 const Features = [

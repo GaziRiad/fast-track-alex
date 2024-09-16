@@ -1,19 +1,5 @@
+import { PartnersImages } from "@/lib/constants";
 import Image from "next/image";
-
-const PartnersImages = [
-  {
-    img: "/images/partners/partner-1.svg",
-    alt: "image1",
-  },
-  {
-    img: "/images/partners/partner-2.svg",
-    alt: "image2",
-  },
-  {
-    img: "/images/partners/partner-3.svg",
-    alt: "image3",
-  },
-];
 
 function Partners() {
   return (
